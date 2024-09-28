@@ -1,0 +1,46 @@
+.top {
+    background-image: url('C:\Users\Abdul Kavi Chaudhary\Desktop\Aviation_final\top.jpg'); /* Background image path */
+    background-size: cover; /* Ensure the background covers the section */
+    background-position: center; /* Center the background */
+    background-repeat: no-repeat; /* Do not repeat the background */
+    height: 60vh; /* Adjust the height to 60% of the viewport */
+    width: 100vw; /* Keep the width full */
+    display: flex; /* Flexbox to center content */
+    flex-direction: column; /* Stack the content vertically */
+    padding: 20px 40px 20px 60px; /* Increased padding on the left */
+}
+
+.hero-title {
+    font-size: 2.5rem; /* Explicitly set the size */
+    margin-bottom: 1rem; /* Space below the heading */
+}
+
+.hero-description {
+    font-size: 1.25rem; /* Adjust paragraph font size */
+    max-width: 600px; /* Maximum width for readability */
+    line-height: 1.5; /* Better readability */
+    margin-bottom: 1rem; /* Reduce space between paragraphs */
+    color: black;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .top {
+        padding: 10px 20px; /* Reduce padding for smaller screens */
+    }
+    .hero-title {
+        font-size: 2rem; /* Smaller font size on smaller screens */
+    }
+    .hero-description {
+        font-size: 1rem; /* Smaller paragraph font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.5rem; /* Even smaller font size for mobile */
+    }
+    .hero-description {
+        font-size: 0.9rem; /* Further reduce paragraph font size */
+    }
+}
