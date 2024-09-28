@@ -62,12 +62,11 @@ const App = () => {
           <div className="modal-content">
             {/* Cross (X) to close the modal */}
             <span className="close-button" onClick={handleClose}>&times;</span>
-            <h1 style={{ padding: '10px' }}>Get in Touch with Us</h1>
-            <p style={{ animation: 'fadeIn 2s' }}>Do you have any inquiries?</p>
+            <h1 style={{ padding: '10px' }}><b>Get in Touch with Us</b></h1>
             <button 
               onClick={handleConfirm} 
               style={{ backgroundColor: 'blue', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>
-              Yes
+              Click Here
             </button>
           </div>
         </div>

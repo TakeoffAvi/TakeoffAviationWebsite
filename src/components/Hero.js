@@ -20,9 +20,9 @@ const Hero = () => (
       transition={{ duration: 0.5, delay: 0.4 }}
       className="hero-description"
     >
-      "We believe in turning passion into precision. Through positive training and dedication, 
+      We believe in turning passion into precision. Through positive training and dedication, 
       we empower aviators to confidently soar above challenges and achieve excellence. 
-      Your journey to success begins here, where skill meets opportunity."
+      Your journey to success begins here, where skill meets opportunity.
     </motion.p>
 
   </section>

@@ -12,7 +12,7 @@ const CoursesList = () => {
   return (
     <div className="course-list grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
       {courses.map(course => (
-        <div key={course.id} className="course-card p-6 bg-white rounded shadow hover:shadow-lg transition-shadow">
+        <div key={course.id} className="course-card p-6 bg-white rounded shadow hover:shadow-lg transition-shadow ml-36">
           <h2 className="text-xl font-bold">{course.name}</h2>
           <p className="text-gray-600">{course.description}</p>
           <Link to={`/course/${course.id}`} className="text-blue-500 hover:underline mt-2 inline-block">

@@ -5,7 +5,7 @@ import { Plane } from 'lucide-react';
 
 const AirplaneScroll = () => {
   const { scrollYProgress } = useViewportScroll();
-  const y = useTransform(scrollYProgress, [0, 1], ['10vh', '80vh']); // Adjust the start and end positions as needed
+  const y = useTransform(scrollYProgress, [0, 1], ['3vh', '80vh']); // Adjust the start and end positions as needed
 
   return (
     <motion.div

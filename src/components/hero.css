@@ -1,5 +1,5 @@
 .top {
-    background-image: url('C:\Users\Abdul Kavi Chaudhary\Desktop\Aviation_final\top.jpg'); /* Background image path */
+    background-image: url('top.jpg'); /* Background image path */
     background-size: cover; /* Ensure the background covers the section */
     background-position: center; /* Center the background */
     background-repeat: no-repeat; /* Do not repeat the background */
@@ -12,11 +12,12 @@
 
 .hero-title {
     font-size: 2.5rem; /* Explicitly set the size */
-    margin-bottom: 1rem; /* Space below the heading */
+    margin-bottom: 1rem;
+    margin-top: 3rem; /* Space below the heading */
 }
 
 .hero-description {
-    font-size: 1.25rem; /* Adjust paragraph font size */
+    font-size: 1.5rem; /* Adjust paragraph font size */
     max-width: 600px; /* Maximum width for readability */
     line-height: 1.5; /* Better readability */
     margin-bottom: 1rem; /* Reduce space between paragraphs */

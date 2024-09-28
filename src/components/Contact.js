@@ -78,13 +78,13 @@ const Contact = () => {
               Give us a call or drop by anytime, we endeavor to answer all inquiries within 24 hours on business days. We will be happy to answer your questions.
             </p>
             <div className="mb-4">
-              <strong className="text-gray-700">Location:</strong> EAST POINT MALL, SHOP NO 10, 2ND FLOOR, SG BARVE MARG, JAGRUTI NAGAR, KURLA EAST MUMBAI, MAHARASHTRA 40002
+              <strong className="text-gray-700">Location:</strong> EAST POINT MALL, SHOP NO 10, 2ND FLOOR, SG BARVE MARG, JAGRUTI NAGAR, KURLA EAST MUMBAI, MAHARASHTRA 400024
             </div>
             <div className="mb-4">
-              <strong className="text-gray-700">Phone Number:</strong> +123 456 7890
+              <strong className="text-gray-700">Phone Number:</strong> <a  href="https://wa.me/919930838202" className="text-blue-600 underline"></a> +91 99308 38202
             </div>
             <div className="mb-4">
-              <strong className="text-gray-700">Email Us:</strong> example@gmail.com
+              <strong className="text-gray-700">Email Us:</strong> ggautami.bbandary@takeoff-aviation.in
             </div>
             {/* Google Maps Embed */}
             <div className="mb-4">
@@ -99,7 +99,7 @@ const Contact = () => {
               ></iframe>
             </div>
             <a 
-              href="https://www.google.com/maps/dir/?api=1&destination=EAST+POINT+MALL,+SHOP+NO+10,+SG+BARVE+MARG,+JAGRUTI+NAGAR,+KURLA+EAST+MUMBAI,+MAHARASHTRA+40002" 
+              href="https://www.google.com/maps/dir/?api=1&destination=EAST+POINT+MALL,+SHOP+NO+10,+SG+BARVE+MARG,+JAGRUTI+NAGAR,+KURLA+EAST+MUMBAI,+MAHARASHTRA+400024" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-blue-600 underline"
@@ -114,6 +114,7 @@ const Contact = () => {
             className="w-full lg:w-1/2 px-4"
           >
             <form ref={form} onSubmit={sendEmail} className="bg-white rounded-lg shadow-md p-6">
+            <h2 className="text-3xl font-bold text-blue-600 mb-4 text-center">Please fill the form below and we'll get in touch with you.</h2> {/* Centered heading */}
               <input
                 type="text"
                 name="from_name"

@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
- // Ensure this path is correct
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  // Function to close the menu
+  const handleMenuClose = () => {
+    setIsOpen(false);
+  };
 
   return (
     <nav className="bg-white py-4 shadow-md">
@@ -22,18 +26,27 @@ const Navigation = () => {
           />
         </motion.div>
 
-        {/* Hamburger Menu Icon - Visible on small screens */}
+        {/* Hamburger Menu Icon - Changes to X when opened */}
         <motion.div
           className="sm:hidden"
           onClick={() => setIsOpen(!isOpen)}
           whileTap={{ scale: 0.9 }}
           aria-label="Toggle navigation"
         >
-          <div className="space-y-2 cursor-pointer">
-            <div className="w-8 h-0.5 bg-blue-600"></div>
-            <div className="w-8 h-0.5 bg-blue-600"></div>
-            <div className="w-8 h-0.5 bg-blue-600"></div>
-          </div>
+          {isOpen ? (
+            // X icon when menu is open
+            <div className="w-8 h-0.5 white relative">
+              <div className="absolute w-full h-0.5 bg-blue-600 rotate-45"></div>
+              <div className="absolute w-full h-0.5 bg-blue-600 -rotate-45 "></div>
+            </div>
+          ) : (
+            // Hamburger menu when closed
+            <div className="space-y-2 cursor-pointer">
+              <div className="w-8 h-0.5 bg-blue-600"></div>
+              <div className="w-8 h-0.5 bg-blue-600"></div>
+              <div className="w-8 h-0.5 bg-blue-600"></div>
+            </div>
+          )}
         </motion.div>
 
         {/* Navigation Links - Hidden on small screens */}
@@ -58,6 +71,7 @@ const Navigation = () => {
                     : `#${item.toLowerCase().replace(' ', '-')}`
                 }
                 className="text-gray-700 hover:text-blue-600 block px-4 py-2"
+                onClick={handleMenuClose} // Close the menu on link click
               >
                 {item}
               </a>
@@ -71,9 +85,10 @@ const Navigation = () => {
           >
             <motion.a
               href="#contact"
-              className="block text-white bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300"
+              className="block text-white bg-blue-600 px-3 py-1.5 md:px-6 md:py-2 rounded-full hover:bg-blue-700 transition duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={handleMenuClose} // Close the menu on "Contact Us" click
             >
               Contact Us
             </motion.a>
