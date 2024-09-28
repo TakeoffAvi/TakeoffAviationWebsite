@@ -20,23 +20,27 @@ const styles = {
     fontWeight: 'bold',
     color: '#3B82F6', // Tailwind's blue-700
     marginBottom: '1rem',
+    marginLeft: '3rem'
   },
   subheading: {
     fontSize: '1.5rem',
     color: '#4B5563', // Tailwind's gray-700
     marginBottom: '1rem',
+    marginLeft: '3rem'
   },
   paragraph: {
     fontSize: '1.125rem',
     color: '#4B5563', // Tailwind's gray-600
     lineHeight: '1.5',
     marginBottom: '1.5rem',
+    marginLeft: '3rem'
   },
   list: {
     display: 'grid',
     gridTemplateColumns: 'repeat(2, 1fr)',
     gap: '1rem',
     fontSize: '1.125rem',
+    marginLeft: '3rem'
   },
   imageContainer: {
     flex: '1 1 50%',

@@ -75,13 +75,13 @@ const Contact = () => {
           >
             <h2 className="text-3xl font-bold text-blue-600 mb-4">Get In Touch With Us</h2>
             <p className="text-gray-600 mb-6">
-              Give us a call or drop by anytime, we endeavor to answer all inquiries within 24 hours on business days. We will be happy to answer your questions.
+              Give us a call or drop a WhatsApp message anytime, we endeavor to answer all enquiries within 24 hours on business days. We will be happy to answer your questions.
             </p>
             <div className="mb-4">
               <strong className="text-gray-700">Location:</strong> EAST POINT MALL, SHOP NO 10, 2ND FLOOR, SG BARVE MARG, JAGRUTI NAGAR, KURLA EAST MUMBAI, MAHARASHTRA 400024
             </div>
             <div className="mb-4">
-              <strong className="text-gray-700">Phone Number:</strong> <a  href="https://wa.me/919930838202" className="text-blue-600 underline"></a> +91 99308 38202
+              <strong className="text-gray-700">Phone Number:</strong> <a  href="https://wa.me/919930838202" className="text-blue-600 underline"> +91 99308 38202</a>
             </div>
             <div className="mb-4">
               <strong className="text-gray-700">Email Us:</strong> ggautami.bbandary@takeoff-aviation.in

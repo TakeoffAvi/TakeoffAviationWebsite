@@ -8,7 +8,7 @@ const CourseCard = ({ icon: Icon, title, description, details, isActive, onClick
       initial={{ opacity: 0, x: isActive ? 20 : 0 }}
       animate={{ opacity: 1, x: isActive ? 0 : 0 }}
       transition={{ duration: 0.5 }}
-      className={`bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow ${isActive ? 'w-72' : 'w-48'}`}
+      className={`bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow ${isActive ? 'w-82' : 'w-70'}`}
       onClick={onClick}
     >
       <Icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
@@ -33,7 +33,7 @@ const CourseCard = ({ icon: Icon, title, description, details, isActive, onClick
           
           <motion.a
             href="#contact"
-            className="inline-block mt-4 bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300"
+            className="inline-block mt-4 bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300 ml-20"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
