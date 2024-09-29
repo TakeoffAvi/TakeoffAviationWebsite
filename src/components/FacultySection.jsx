@@ -25,7 +25,7 @@ const FacultySection = () => {
   return (
     <section id="faculty" className={`faculty-section bg-gray-100 py-20 transition-opacity duration-1000 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
       <div className="container mx-auto px-4 max-w-6xl">
-        <h2 className="text-3xl font-bold text-center mb-12 text-blue-600 animate-fadeIn">Our Experienced Faculty</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 mt-10 text-blue-600 animate-fadeIn">Our Experienced Faculty</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {facultyMembers.map((faculty, index) => (
             <div 
