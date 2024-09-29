@@ -1,78 +1,69 @@
-// App.js
 import React, { useEffect, useState, useRef } from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import AboutUs from './components/AboutUs';
 import DetailedCourses from './components/DetailedCourses';
+import FacultySection from './components/FacultySection'; // Import the new component
 import Memories from './components/Memories';
-import Contact from './components/Contact'; // Contact component
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 import AirplaneScroll from './components/AirplaneScroll';
 
-import './App.css'; // Main CSS
+import './App.css';
 
 const App = () => {
-  const [modalOpen, setModalOpen] = useState(false); // Initially closed
-  const [hasShownModal, setHasShownModal] = useState(false); // State to track if modal has been shown
+  const [modalOpen, setModalOpen] = useState(false);
+  const [hasShownModal, setHasShownModal] = useState(false);
+  const contactRef = useRef(null);
+  const coursesRef = useRef(null);
 
-  const contactRef = useRef(null); // Reference for the contact section
-  const coursesRef = useRef(null); // Reference for the courses section
-
-  // Show modal after 5 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
       if (!hasShownModal) {
-        setModalOpen(true); // Open the modal after 5 seconds
-        setHasShownModal(true); // Mark that the modal has been shown
+        setModalOpen(true);
+        setHasShownModal(true);
       }
-    }, 15000); // 5000ms = 5 seconds
+    }, 15000);
 
-    return () => clearTimeout(timer); // Cleanup timer on unmount
+    return () => clearTimeout(timer);
   }, [hasShownModal]);
 
-  // Function to handle confirmation
   const handleConfirm = () => {
-    setModalOpen(false); // Close the modal
-    contactRef.current.scrollIntoView({ behavior: 'smooth' }); // Scroll to the contact section
+    setModalOpen(false);
+    contactRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
-  // Function to close the modal without confirming
   const handleClose = () => {
-    setModalOpen(false); // Close the modal
+    setModalOpen(false);
   };
 
-  // Function to scroll to courses section
   const scrollToCourses = () => {
     coursesRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <div>
-      <AirplaneScroll /> {/* Airplane scroll animation */}
+      <AirplaneScroll />
       <Navigation onCoursesClick={scrollToCourses} />
       <Hero />
       <AboutUs />
       <div ref={coursesRef}>
         <DetailedCourses />
       </div>
+      <FacultySection /> {/* Add the new FacultySection component here */}
       <Memories />
-
-      {/* Contact Section with ref */}
       <div ref={contactRef}>
         <Contact />
       </div>
-
       <Footer />
 
-      {/* Modal Dialog for Contact Prompt */}
       {modalOpen && (
         <div className="modal">
           <div className="modal-content">
-            {/* Cross (X) to close the modal */}
             <span className="close-button" onClick={handleClose}>&times;</span>
             <h1 style={{ padding: '10px' }}><b>Get in Touch with Us</b></h1>
-            <button 
-              onClick={handleConfirm} 
+            <button
+              onClick={handleConfirm}
               style={{ backgroundColor: 'blue', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>
               Click Here
             </button>
