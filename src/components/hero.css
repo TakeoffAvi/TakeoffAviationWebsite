@@ -4,7 +4,7 @@
     background-position: center; /* Center the background */
     background-repeat: no-repeat; /* Do not repeat the background */
     height: 60vh; /* Adjust the height to 60% of the viewport */
-    width: 100vw; /* Keep the width full */
+    width: full; /* Keep the width full */
     display: flex; /* Flexbox to center content */
     flex-direction: column; /* Stack the content vertically */
     padding: 20px 40px 20px 60px; /* Increased padding on the left */
