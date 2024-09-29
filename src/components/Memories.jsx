@@ -42,22 +42,22 @@ const Memories = () => (
         },
         {
           title: 'Placement at AirIndia',
-          description: 'An alumni now flying with Air India. ',
+          description: 'One of our Alumnus is flying with Air India. ',
           imageUrl: `${process.env.PUBLIC_URL}/images/m4.jpg`,
         },
         {
           title: 'Placement at Qatar Airways',
-          description: 'Another Alumni is now flying across countries with Qatar Airways.',
+          description: 'Another Alumnus is flying across countries with Qatar Airways.',
           imageUrl: `${process.env.PUBLIC_URL}/images/m5.jpg`,
         },
         {
           title: 'Placement at Akasa Airways',
-          description: "Another Alumni has joined Akasa Airways with help of Ggautami Bbandary Ma'am.",
+          description: "Another Alumnus has joined Akasa Airways with help of Ggautami Bbandary Ma'am.",
           imageUrl: `${process.env.PUBLIC_URL}/images/m6.jpg`,
         },
         {
           title: 'Placement at Spice-Jet Airways',
-          description: "Another Alumni has joined Spice-Jet Airways on their journey to the skies.",
+          description: "Another proud alumnus has joined SpiceJet Airways, embarking on their exciting journey to the skies.",
           imageUrl: `${process.env.PUBLIC_URL}/images/m7.jpg`,
         },
       ].map((memory, index) => (
