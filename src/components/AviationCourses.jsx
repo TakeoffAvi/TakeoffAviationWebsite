@@ -7,6 +7,7 @@ const Aviation = () => {
   return (
     <Router>
       <div>
+      <h1 className="text-4xl text-center py-8">Aviation Courses Overview</h1>
         <Routes>
           <Route path="/" element={<CoursesList />} />
           <Route path="/course/:id" element={<DetailedCourses />} />
