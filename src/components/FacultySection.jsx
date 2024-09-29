@@ -9,7 +9,7 @@ const FacultySection = () => {
 
   const facultyMembers = [
     {
-      name: "Gautami B. Bandary",
+      name: "Ggautami Bbandary",
       title: "Founder",
       intro: "Senior Cabin Crew Member with 17 years of experience in domestic and international airlines, specializing in exceptional customer service and safety management.",
       image: "/images/staff2.jpg" // Image path
