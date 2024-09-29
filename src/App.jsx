@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import AboutUs from './components/AboutUs';
-import Courses from './components/AviationCourses';
+import AviationCourses from './components/AviationCourses';
 import Memories from './components/Memories';
 import Contact from './components/Contact'; // Contact component
 import Footer from './components/Footer';
@@ -16,6 +16,7 @@ const App = () => {
   const [hasShownModal, setHasShownModal] = useState(false); // State to track if modal has been shown
 
   const contactRef = useRef(null); // Reference for the contact section
+  const coursesRef = useRef(null); // Reference for the courses section
 
   // Show modal after 5 seconds
   useEffect(() => {
@@ -24,7 +25,7 @@ const App = () => {
         setModalOpen(true); // Open the modal after 5 seconds
         setHasShownModal(true); // Mark that the modal has been shown
       }
-    }, 5000); // 5000ms = 5 seconds
+    }, 15000); // 5000ms = 5 seconds
 
     return () => clearTimeout(timer); // Cleanup timer on unmount
   }, [hasShownModal]);
@@ -40,13 +41,20 @@ const App = () => {
     setModalOpen(false); // Close the modal
   };
 
+  // Function to scroll to courses section
+  const scrollToCourses = () => {
+    coursesRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div>
       <AirplaneScroll /> {/* Airplane scroll animation */}
-      <Navigation />
+      <Navigation onCoursesClick={scrollToCourses} />
       <Hero />
       <AboutUs />
-      <Courses />
+      <div ref={coursesRef}>
+        <AviationCourses />
+      </div>
       <Memories />
 
       {/* Contact Section with ref */}

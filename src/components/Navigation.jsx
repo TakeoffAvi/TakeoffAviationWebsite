@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const Navigation = () => {
+const Navigation = ({ onCoursesClick }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   // Function to close the menu
@@ -67,11 +67,11 @@ const Navigation = () => {
                   item === 'Home'
                     ? '#'
                     : item === 'Courses'
-                    ? '#aviation-courses'
+                    ? "#courses"
                     : `#${item.toLowerCase().replace(' ', '-')}`
                 }
                 className="text-gray-700 hover:text-blue-600 block px-4 py-2"
-                onClick={handleMenuClose} // Close the menu on link click
+                onClick={(item === 'Courses') ? () => { handleMenuClose(); onCoursesClick(); } : handleMenuClose} // Close the menu and handle Courses click
               >
                 {item}
               </a>

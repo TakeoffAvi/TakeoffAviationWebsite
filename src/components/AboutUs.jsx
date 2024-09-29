@@ -13,6 +13,7 @@ const styles = {
   textContainer: {
     flex: '1 1 40%', // Flexbox properties for responsive design
     paddingRight: '2rem',
+    marginTop:"2rem",
     marginBottom: '2rem',
   },
   heading: {
@@ -44,6 +45,7 @@ const styles = {
   },
   imageContainer: {
     flex: '1 1 50%',
+    marginTop:"1.5rem"
   },
   image: {
     borderRadius: '0.5rem', // Rounded corners
