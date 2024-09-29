@@ -10,7 +10,7 @@ const MemoryCard = ({ title, description, imageUrl }) => (
     whileHover={{ scale: 1.05 }}
     className="bg-white rounded-lg shadow-md overflow-hidden"
   >
-    <img src={imageUrl} alt={title} className="w-full h-40 object-cover" />
+    <img src={imageUrl} alt={title} className="w-full h-80 object-cover"/>
     <div className="p-4 text-center">
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
       <p className="text-gray-600">{description}</p>
@@ -28,22 +28,27 @@ const Memories = () => (
     >
       Our Memorable Moments
     </motion.h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
       {[
         {
-          title: 'First Graduation Ceremony',
-          description: 'A day to remember as we celebrated our first batch of graduates.',
-          imageUrl: 'https://via.placeholder.com/400?text=Graduation+Ceremony',
+          title: 'Indigo Graduation Ceremony',
+          description: 'Graduation day at Indigo',
+          imageUrl: `${process.env.PUBLIC_URL}/images/m1.jpg`,
         },
         {
-          title: 'Aviation Day Event',
-          description: 'A fun-filled day with various activities and aviation enthusiasts.',
-          imageUrl: 'https://via.placeholder.com/400?text=Aviation+Day',
+          title: 'Seminar Conducted',
+          description: 'Conducted a seminar for soft skill enhancement.',
+          imageUrl: `${process.env.PUBLIC_URL}/images/m3.jpg`,
         },
         {
-          title: 'Guest Lecture by Industry Expert',
-          description: 'An insightful session with an aviation industry expert.',
-          imageUrl: 'https://via.placeholder.com/400?text=Guest+Lecture',
+          title: 'Placement at AirIndia',
+          description: 'An alumni now flying with Air India. ',
+          imageUrl: `${process.env.PUBLIC_URL}/images/m4.jpg`,
+        },
+        {
+          title: 'Placement in Qatar Airways',
+          description: 'Another Alumni is now flying across countries with Qatar Airways.',
+          imageUrl: `${process.env.PUBLIC_URL}/images/m5.jpg`,
         },
       ].map((memory, index) => (
         <MemoryCard
