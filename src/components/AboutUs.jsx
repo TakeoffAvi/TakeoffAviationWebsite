@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { AlignCenter } from 'lucide-react';
 
 // Inline styles for the About Us section
 const styles = {
@@ -21,27 +22,31 @@ const styles = {
     fontWeight: 'bold',
     color: '#3B82F6', // Tailwind's blue-700
     marginBottom: '1rem',
-    marginLeft: '3rem'
+    marginLeft: '2rem',
+    marginRight:'3rem'
   },
   subheading: {
     fontSize: '1.5rem',
     color: '#4B5563', // Tailwind's gray-700
     marginBottom: '1rem',
-    marginLeft: '3rem'
+    marginLeft: '2rem',
+    marginRight:'3rem'
   },
   paragraph: {
     fontSize: '1.125rem',
     color: '#4B5563', // Tailwind's gray-600
     lineHeight: '1.5',
     marginBottom: '1.5rem',
-    marginLeft: '3rem'
+    marginLeft: '2rem',
+    marginRight:'3rem'
   },
   list: {
     display: 'grid',
     gridTemplateColumns: 'repeat(2, 1fr)',
     gap: '1rem',
     fontSize: '1.125rem',
-    marginLeft: '3rem'
+    marginLeft: '2rem',
+    marginRight:'3rem'
   },
   imageContainer: {
     flex: '1 1 50%',
@@ -70,7 +75,7 @@ const AboutUs = () => (
       transition={{ duration: 0.5 }}
       style={styles.textContainer}
     >
-      <h2 style={styles.heading}>WELCOME TO TAKE OFF AVIATION ACADEMY</h2>
+      <h2 style={styles.heading} >WELCOME TO TAKE OFF AVIATION ACADEMY</h2>
       <h3 style={styles.subheading}>YOUR GATEWAY TO A SKY-HIGH CAREER!</h3>
       <p style={styles.paragraph}>
         At Take Off Aviation Academy, we turn your passion for aviation into a rewarding career. Our comprehensive training program equips you with the skills, knowledge, and confidence to excel as a cabin crew member or air hostess. Join us and begin your journey towards a dynamic and exciting career in the skies!

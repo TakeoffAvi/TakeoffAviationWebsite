@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import AboutUs from './components/AboutUs';
-import AviationCourses from './components/AviationCourses';
+import DetailedCourses from './components/DetailedCourses';
 import Memories from './components/Memories';
 import Contact from './components/Contact'; // Contact component
 import Footer from './components/Footer';
@@ -53,7 +53,7 @@ const App = () => {
       <Hero />
       <AboutUs />
       <div ref={coursesRef}>
-        <AviationCourses />
+        <DetailedCourses />
       </div>
       <Memories />
 
