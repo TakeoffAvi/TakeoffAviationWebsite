@@ -32,7 +32,7 @@ const Memories = () => (
       {[
         {
           title: 'Indigo Graduation Ceremony',
-          description: 'Graduation day at Indigo',
+          description: 'Graduation day at Indigo Airways',
           imageUrl: `${process.env.PUBLIC_URL}/images/m1.jpg`,
         },
         {
