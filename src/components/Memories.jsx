@@ -58,7 +58,7 @@ const Memories = () => (
         {
           title: 'Placement at Spice-Jet Airways',
           description: "Another Alumni has joined Spice-Jet Airways on their journey to the skies.",
-          imageUrl: `${process.env.PUBLIC_URL}/images/m6.jpg`,
+          imageUrl: `${process.env.PUBLIC_URL}/images/m7.jpg`,
         },
       ].map((memory, index) => (
         <MemoryCard
