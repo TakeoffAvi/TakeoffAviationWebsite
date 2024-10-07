@@ -66,8 +66,12 @@ const Memories = () => (
           imageUrl: `${process.env.PUBLIC_URL}/images/m8_fadnavis.jpg`,
         },
         {
-          title: 'Commercial Pilot License with SkyLark',
-          description: "Get your Commercial Pilot License with SkyLark, Our Collaborating Partner.",
+          title: (<>Commercial Pilot License with <a href="https://www.skylarkaviation.in" target="_blank" rel="noopener noreferrer"><u>SkyLark Aviation</u></a></>),
+          description: (
+            <>
+              Get your Commercial Pilot License with SkyLark, Our Collaborating Partner.
+            </>
+          ),
           imageUrl: `${process.env.PUBLIC_URL}/images/m9.jpg`,
         },
       ].map((memory, index) => (
