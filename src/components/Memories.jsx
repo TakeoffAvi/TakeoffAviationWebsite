@@ -42,7 +42,7 @@ const Memories = () => (
         },
         {
           title: 'Placement at AirIndia',
-          description: 'One of our Alumnus is flying with Air India. ',
+          description: 'One of our alumna is flying with Air India. ',
           imageUrl: `${process.env.PUBLIC_URL}/images/m4.jpg`,
         },
         {
@@ -52,13 +52,23 @@ const Memories = () => (
         },
         {
           title: 'Placement at Akasa Airways',
-          description: "Another Alumnus has joined Akasa Airways with help of Ggautami Bbandary Ma'am.",
+          description: "Another alumna has joined Akasa Airways with help of Ggautami Bbandary Ma'am.",
           imageUrl: `${process.env.PUBLIC_URL}/images/m6.jpg`,
         },
         {
           title: 'Placement at Spice-Jet Airways',
-          description: "Another proud alumnus has joined SpiceJet Airways, embarking on their exciting journey to the skies.",
+          description: "Another proud alumna has joined SpiceJet Airways, embarking on their exciting journey to the skies.",
           imageUrl: `${process.env.PUBLIC_URL}/images/m7.jpg`,
+        },
+        {
+          title: 'Our alumna with Deputy CM of Maharashtra',
+          description: "One of our Alumna with Deputy CM Shree Devendra Fadnavis",
+          imageUrl: `${process.env.PUBLIC_URL}/images/m8_fadnavis.jpg`,
+        },
+        {
+          title: 'Commercial Pilot License with SkyLark',
+          description: "Get your Commercial Pilot License with SkyLark, Our Collaborating Partner.",
+          imageUrl: `${process.env.PUBLIC_URL}/images/m9.jpg`,
         },
       ].map((memory, index) => (
         <MemoryCard
