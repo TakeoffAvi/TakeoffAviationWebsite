@@ -78,7 +78,13 @@ const AboutUs = () => (
       <h2 style={styles.heading} >WELCOME TO TAKE OFF AVIATION ACADEMY</h2>
       <h3 style={styles.subheading}>YOUR GATEWAY TO A SKY-HIGH CAREER!</h3>
       <p style={styles.paragraph}>
-        At Take Off Aviation Academy, we turn your passion for aviation into a rewarding career. Our comprehensive training program equips you with the skills, knowledge, and confidence to excel as a cabin crew member or air hostess. Join us and begin your journey towards a dynamic and exciting career in the skies!
+      Takeoff Aviation Academy is a premier institution providing specialized aviation training for careers in air hostess services, flight purser roles, ticketing and reservation management, and customer relations. We offer industry-focused programs designed to prepare students for global aviation opportunities, emphasizing service excellence, leadership skills, and customer service expertise.
+      </p>
+      <p style={styles.paragraph}>
+      Our courses include Air Hostess Training, Flight Purser Training, and Ticketing & Reservation Management, along with Customer Relations & Personality Development to enhance communication and professional growth. With expert instructors and modern facilities, Takeoff Aviation Academy ensures students are equipped to excel in the fast-paced aviation industry.
+      </p>
+      <p style={styles.paragraph}>
+      <a href="#contact"><u><b>Join us</b></u></a> and launch your career with one of the best aviation academies in India, offering top-tier training for the aviation industry.
       </p>
       <ul style={styles.list}>
         {[

@@ -66,6 +66,11 @@ const Memories = () => (
           imageUrl: `${process.env.PUBLIC_URL}/images/m8_fadnavis.jpg`,
         },
         {
+          title: 'Our alumna with Qatar Airways after Akasa Airways',
+          description: "One of our Alumna who was placed with Akasa Airways has no been hired by Qatar Airways.",
+          imageUrl: `${process.env.PUBLIC_URL}/images/m10.jpg`,
+        },
+        {
           title: (<>Commercial Pilot License with <a href="https://www.skylarkaviation.in" target="_blank" rel="noopener noreferrer"><u>SkyLark Aviation</u></a></>),
           description: (
             <>

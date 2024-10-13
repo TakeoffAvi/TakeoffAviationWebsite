@@ -52,10 +52,10 @@ const DetailedCourses = () => {
     {
       id: 'air-hostesses',
       icon: Users,
-      title: 'Air Hostesses',
+      title: 'Air Hostesses Training',
       description: 'Training for aspiring air hostesses, focusing on service excellence.',
       details: {
-        description: 'Our Air Hostess course is designed to train you in exceptional service...',
+        description: 'Our Air Hostess Training program provides comprehensive training for those aspiring to become professional air hostesses. This course focuses on developing service excellence, safety protocols, and interpersonal skills essential for delivering exceptional in-flight customer service across various airlines.',
         benefits: [
           'Comprehensive training in in-flight service excellence',
           'Grooming and presentation skills',
@@ -68,10 +68,10 @@ const DetailedCourses = () => {
     {
       id: 'flight-pursers',
       icon: Star,
-      title: 'Flight Pursers',
+      title: 'Flight Pursers Training',
       description: 'Comprehensive training for flight pursers, including leadership skills.',
       details: {
-        description: 'Pursue leadership in the aviation industry with our Flight Pursers course...',
+        description: 'The Flight Purser Training program is ideal for individuals aiming to step into supervisory roles within the cabin crew. This course emphasizes leadership, crew management, and operational efficiency, preparing students for flight purser responsibilities in the aviation industry worldwide.',
         benefits: [
           'Advanced training in leadership and team management',
           'Customer service and interpersonal skills',
@@ -84,10 +84,10 @@ const DetailedCourses = () => {
     {
       id: 'ticketing-reservation',
       icon: Ticket,
-      title: 'Ticketing & Reservation',
+      title: 'Ticketing & Reservation Management',
       description: 'Learn the essentials of ticketing systems and reservation management.',
       details: {
-        description: 'Master the art of booking and managing reservations with our Ticketing & Reservation course...',
+        description: "Learn the ins and outs of ticketing systems and reservation management with our specialized training program. Gain essential knowledge in handling airline reservations, ticket issuance, and customer interaction, skills highly sought after by both domestic and international airlines.",
         benefits: [
           'Understanding ticketing systems and software',
           'Managing bookings, cancellations, and queries',
@@ -103,7 +103,7 @@ const DetailedCourses = () => {
       title: 'Customer Relations & Personality Development',
       description: 'Enhance skills in communication and relationship management alongside personal development.',
       details: {
-        description: 'Enhance your interpersonal skills and develop a professional persona...',
+        description: 'Our Customer Relations & Personality Development course helps students enhance their communication, customer handling, and personal presentation skills, vital for aviation customer service roles. This training focuses on relationship management, soft skills, and professional development, perfect for careers in aviation and hospitality.',
         benefits: [
           'Enhance communication and interpersonal skills',
           'Developing a confident and professional personality',
@@ -130,6 +130,16 @@ const DetailedCourses = () => {
         >
           Take OFF Aviation Academy - Aviation Courses
         </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-3xl text-center text-gray-700 mb-12 mt-12 mr-6 ml-6"
+        >
+        At Takeoff Aviation Academy, we offer a variety of aviation training programs tailored to prepare individuals for dynamic careers in the aviation industry. Our courses are designed to equip students with the necessary skills to succeed in global aviation roles, ranging from in-flight services to ground operations and customer relations.
+        </motion.p>
+
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {courses.map((course) => (
