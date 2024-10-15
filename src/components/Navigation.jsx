@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { FaWhatsapp } from 'react-icons/fa'; // Import the WhatsApp icon from react-icons
 
 const Navigation = ({ onCoursesClick }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -70,6 +71,7 @@ const Navigation = ({ onCoursesClick }) => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
+            className="flex items-center space-x-2" // Add space between the buttons
           >
             <motion.a
               href="#contact"
@@ -79,6 +81,15 @@ const Navigation = ({ onCoursesClick }) => {
               onClick={handleMenuClose}
             >
               Contact Us
+            </motion.a>
+            <motion.a
+              href="https://wa.me/1234567890" // Replace with the owner's WhatsApp number
+              className="text-green-500 hover:text-green-600 transition duration-300"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={handleMenuClose}
+            >
+              <FaWhatsapp size={24} /> {/* Adjust size as needed */}
             </motion.a>
           </motion.li>
         </ul>
