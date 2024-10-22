@@ -83,7 +83,7 @@ const Navigation = ({ onCoursesClick }) => {
               Contact Us
             </motion.a>
             <motion.a
-              href="https://wa.me/1234567890" // Replace with the owner's WhatsApp number
+              href="https://wa.me/918928334024" // Replace with the owner's WhatsApp number
               className="text-green-500 hover:text-green-600 transition duration-300"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
