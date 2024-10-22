@@ -81,7 +81,7 @@ const Contact = () => {
               <strong className="text-gray-700">Location:</strong> EAST POINT MALL, OFFICE NO 10, 2ND FLOOR, SG BARVE MARG, JAGRUTI NAGAR, KURLA EAST MUMBAI, MAHARASHTRA 400024
             </div>
             <div className="mb-4">
-              <strong className="text-gray-700">Phone Number:</strong> <a  href="https://wa.me/918928334024" className="text-blue-600 underline"> +91 89283 34024</a>
+              <strong className="text-gray-700">Phone Number:</strong> <a  href="https://wa.me/918928334024" className="text-blue-600 underline"> +91 99308 38202</a>
             </div>
             <div className="mb-4">
               <strong className="text-gray-700">Email Us:</strong> ggautami.bbandary@takeoff-aviation.in
