@@ -8,6 +8,7 @@ import Memories from './components/Memories';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import AirplaneScroll from './components/AirplaneScroll';
+import { Analytics } from "@vercel/analytics/react"
 
 import './App.css';
 
