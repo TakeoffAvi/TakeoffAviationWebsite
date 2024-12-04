@@ -20,6 +20,8 @@ const Contact = () => {
   const [countryCode, setCountryCode] = useState(countries[0].code); // Default to first country code
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
+  const phoneRegex = /^[0-9]{10}$/;
+  
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regular expression for valid email
 
@@ -66,9 +68,54 @@ const Contact = () => {
       );
   };
 
-  const handleButtonClick = () => {    
+  const validateForm = () => {
+    
+
+    // Reset error state
+    setError('');
+
+    if (
+      phoneNumber.length < 10
+    ) {
+      setError(
+        `Phone number must be between 10`
+      );
+
+      return false;
+    }
+
+
+    return true;
+  };
+
+  const validatePhoneNumber = () => {
+    // Check if the phone number matches the pattern
+    if (!phoneRegex.test(phoneNumber)) {
+      setError('Please enter a valid 10-digit phone number.');
+      return false;
+    }
+    setError(''); // Clear the error if valid
+    return true;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent form submission
+
+    // Validate phone number before proceeding
+    if (!validatePhoneNumber()) return;
+
+    // If valid, proceed with form submission (e.g., sending the email)
+    console.log('Form submitted successfully!');
+
+    // You can call the email sending logic here (like emailjs)
+    form.current.reset(); // Reset the form
     setThankModalOpen(true);
   };
+  // const handleButtonClick = (e) => {
+  //   e.preventDefault();
+  //   if (!validateForm()) return;
+  //   setThankModalOpen(true);
+  // };
 
   return (
     <section id="contact" className="bg-gray-100 py-16">
@@ -122,6 +169,7 @@ const Contact = () => {
             className="w-full lg:w-1/2 px-4"
           >
             <form
+            ref={form}
             className="bg-white rounded-lg shadow-md p-6"
             method="post"
             action="https://form.digitalsochmedia.com/thanku.php"
@@ -143,11 +191,14 @@ const Contact = () => {
                 border: "1px solid #ddd",
                 fontSize: "1rem",
               }}
+              required
             />
             <input
+
               type="text"
               className="form-control"
               name="mobile"
+              onChange={(e) => setPhoneNumber(e.target.value)}
               pattern="[0-9]{10}"
               autoComplete="off"
               maxLength="10"
@@ -159,7 +210,10 @@ const Contact = () => {
                 border: "1px solid #ddd",
                 fontSize: "1rem",
               }}
+              required
             />
+            {/* Display error message if validation fails */}
+            {error && <div style={{ color: 'red', marginTop: '10px' }}>{error}</div>}
             <input
               type="text"
               className="form-control"
@@ -171,11 +225,12 @@ const Contact = () => {
                 border: "1px solid #ddd",
                 fontSize: "1rem",
               }}
+              required
             />
             <input
               type="hidden"
               name="clientMailID"
-              value="zealcarcare@gmail.com"
+              value="takeoffaviation99@gmail.com"
             />
             <input
               name="website"
@@ -187,7 +242,7 @@ const Contact = () => {
             <button
               type="submit"
               className="btn btn-block"
-              onClick={handleButtonClick}
+              onClick={handleSubmit}
               style={{
                 backgroundColor: "#ec6c11",
                 color: "#fff",
