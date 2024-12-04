@@ -23,7 +23,7 @@ const App = () => {
         setModalOpen(true);
         setHasShownModal(true);
       }
-    }, 1000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, [hasShownModal]);
