@@ -14,11 +14,12 @@ const countries = [
 
 const Contact = () => {
   const [ThankYou, setThankModalOpen] = useState(false);
-  const form = useRef();
+
   const [status, setStatus] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [countryCode, setCountryCode] = useState(countries[0].code); // Default to first country code
   const [email, setEmail] = useState('');
+  const form = useRef();
   const [error, setError] = useState('');
   const phoneRegex = /^[0-9]{10}$/;
   
@@ -125,7 +126,7 @@ const Contact = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="w-full lg:w-1/2 px-4 mb-8 lg:mb-0"
+            className="w-full lg:w-1/2 px-4 mb-12 lg:mb-0"
           >
             <h2 className="text-3xl font-bold text-blue-600 mb-4">Get In Touch With Us</h2>
             <p className="text-gray-600 mb-6">
@@ -162,102 +163,7 @@ const Contact = () => {
               Open in Google Maps
             </a>
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="w-full lg:w-1/2 px-4"
-          >
-            <form
-            ref={form}
-            className="bg-white rounded-lg shadow-md p-6"
-            method="post"
-            action="https://form.digitalsochmedia.com/thanku.php"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "15px",
-            }}
-          >
-             <h2 className="text-3xl font-bold text-blue-600 mb-4 text-center">Please fill the form below and we'll get in touch with you.</h2> {/* Centered heading */}
-            <input
-              type="text"
-              name="name"
-              className="form-control"
-              placeholder="Enter Your Name"
-              style={{
-                padding: "10px",
-                borderRadius: "8px",
-                border: "1px solid #ddd",
-                fontSize: "1rem",
-              }}
-              required
-            />
-            <input
-
-              type="text"
-              className="form-control"
-              name="mobile"
-              onChange={(e) => setPhoneNumber(e.target.value)}
-              pattern="[0-9]{10}"
-              autoComplete="off"
-              maxLength="10"
-              // onKeyPress={isNumber}
-              placeholder="Enter Mobile Number"
-              style={{
-                padding: "10px",
-                borderRadius: "8px",
-                border: "1px solid #ddd",
-                fontSize: "1rem",
-              }}
-              required
-            />
-            {/* Display error message if validation fails */}
-            {error && <div style={{ color: 'red', marginTop: '10px' }}>{error}</div>}
-            <input
-              type="text"
-              className="form-control"
-              name="msg"
-              placeholder="Enter Your Message"
-              style={{
-                padding: "10px",
-                borderRadius: "8px",
-                border: "1px solid #ddd",
-                fontSize: "1rem",
-              }}
-              required
-            />
-            <input
-              type="hidden"
-              name="clientMailID"
-              value="takeoffaviation99@gmail.com"
-            />
-            <input
-              name="website"
-              type="hidden"
-              value="takeoff-aviation.in/thanku.html"
-            />
-            <input name="loginID" type="hidden" value="1583" />
-            <input name="orderID" type="hidden" value="1742" />
-            <button
-              type="submit"
-              className="btn btn-block"
-              onClick={handleSubmit}
-              style={{
-                backgroundColor: "#ec6c11",
-                color: "#fff",
-                padding: "12px",
-                fontSize: "1rem",
-                border: "none",
-                borderRadius: "8px",
-                cursor: "pointer",
-                textAlign: "center",
-              }}
-            >
-              <span className="fa fa-paper-plane"></span> Submit
-            </button>
-          </form>
-          </motion.div>
+         
         </div>
       </div>
       <a href="tel:+7291014269" class="float" target="_blank">
@@ -311,7 +217,102 @@ const Contact = () => {
 
 export default Contact;
 
+// <motion.div
+// initial={{ opacity: 0, x: 50 }}
+// animate={{ opacity: 1, x: 0 }}
+// transition={{ duration: 0.5 }}
+// className="w-full lg:w-1/2 px-4"
+// >
+// <form
+// ref={form}
+// className="bg-white rounded-lg shadow-md p-6"
+// method="post"
+// action="https://form.digitalsochmedia.com/thanku.php"
+// style={{
+//   display: "flex",
+//   flexDirection: "column",
+//   gap: "15px",
+// }}
+// >
+//  <h2 className="text-3xl font-bold text-blue-600 mb-4 text-center">Please fill the form below and we'll get in touch with you.</h2> {/* Centered heading */}
+// <input
+//   type="text"
+//   name="name"
+//   className="form-control"
+//   placeholder="Enter Your Name"
+//   style={{
+//     padding: "10px",
+//     borderRadius: "8px",
+//     border: "1px solid #ddd",
+//     fontSize: "1rem",
+//   }}
+//   required
+// />
+// <input
 
+//   type="text"
+//   className="form-control"
+//   name="mobile"
+//   onChange={(e) => setPhoneNumber(e.target.value)}
+//   pattern="[0-9]{10}"
+//   autoComplete="off"
+//   maxLength="10"
+//   // onKeyPress={isNumber}
+//   placeholder="Enter Mobile Number"
+//   style={{
+//     padding: "10px",
+//     borderRadius: "8px",
+//     border: "1px solid #ddd",
+//     fontSize: "1rem",
+//   }}
+//   required
+// />
+// {/* Display error message if validation fails */}
+// {error && <div style={{ color: 'red', marginTop: '10px' }}>{error}</div>}
+// <input
+//   type="text"
+//   className="form-control"
+//   name="msg"
+//   placeholder="Enter Your Message"
+//   style={{
+//     padding: "10px",
+//     borderRadius: "8px",
+//     border: "1px solid #ddd",
+//     fontSize: "1rem",
+//   }}
+//   required
+// />
+// <input
+//   type="hidden"
+//   name="clientMailID"
+//   value="takeoffaviation99@gmail.com"
+// />
+// <input
+//   name="website"
+//   type="hidden"
+//   value="takeoff-aviation.in/thanku.html"
+// />
+// <input name="loginID" type="hidden" value="1583" />
+// <input name="orderID" type="hidden" value="1742" />
+// <button
+//   type="submit"
+//   className="btn btn-block"
+//   onClick={handleSubmit}
+//   style={{
+//     backgroundColor: "#ec6c11",
+//     color: "#fff",
+//     padding: "12px",
+//     fontSize: "1rem",
+//     border: "none",
+//     borderRadius: "8px",
+//     cursor: "pointer",
+//     textAlign: "center",
+//   }}
+// >
+//   <span className="fa fa-paper-plane"></span> Submit
+// </button>
+// </form>
+// </motion.div>
 
 // <form ref={form} onSubmit={sendEmail} className="bg-white rounded-lg shadow-md p-6">
 // <h2 className="text-3xl font-bold text-blue-600 mb-4 text-center">Please fill the form below and we'll get in touch with you.</h2> {/* Centered heading */}

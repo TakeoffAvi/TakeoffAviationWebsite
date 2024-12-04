@@ -188,7 +188,7 @@ const App = () => {
             <input
               name="website"
               type="hidden"
-              value="takeoff-aviation.in/thanku.html"
+              value="takeoff-aviation.in/thank_you.html"
             />
             <input name="loginID" type="hidden" value="1583" />
             <input name="orderID" type="hidden" value="1742" />
