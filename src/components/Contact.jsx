@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 const countries = [
   { name: 'United States', code: '+1', minLength: 10, maxLength: 10 },
@@ -11,6 +13,7 @@ const countries = [
 ];
 
 const Contact = () => {
+  const [ThankYou, setThankModalOpen] = useState(false);
   const form = useRef();
   const [status, setStatus] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -63,6 +66,10 @@ const Contact = () => {
       );
   };
 
+  const handleButtonClick = () => {    
+    setThankModalOpen(true);
+  };
+
   return (
     <section id="contact" className="bg-gray-100 py-16">
       <div className="container mx-auto px-4">
@@ -81,7 +88,8 @@ const Contact = () => {
               <strong className="text-gray-700">Location:</strong> EAST POINT MALL, OFFICE NO 10, 2ND FLOOR, SG BARVE MARG, JAGRUTI NAGAR, KURLA EAST MUMBAI, MAHARASHTRA 400024
             </div>
             <div className="mb-4">
-              <strong className="text-gray-700">Phone Number:</strong> <a  href="https://wa.me/918928334024" className="text-blue-600 underline"> +91 89283 34024</a>
+              {/* <strong className="text-gray-700">Phone Number:</strong> <a  href="https://wa.me/918928334024" className="text-blue-600 underline"> +91 89283 34024</a> */}
+              <strong className="text-gray-700">Phone Number:</strong> <a  href="tel:7291014269" className="text-blue-600 underline"> +91 72910 14269</a>
             </div>
             <div className="mb-4">
               <strong className="text-gray-700">Email Us:</strong> ggautami.bbandary@takeoff-aviation.in
@@ -113,76 +121,205 @@ const Contact = () => {
             transition={{ duration: 0.5 }}
             className="w-full lg:w-1/2 px-4"
           >
-            <form ref={form} onSubmit={sendEmail} className="bg-white rounded-lg shadow-md p-6">
-            <h2 className="text-3xl font-bold text-blue-600 mb-4 text-center">Please fill the form below and we'll get in touch with you.</h2> {/* Centered heading */}
-              <input
-                type="text"
-                name="from_name"
-                placeholder="Your Name"
-                required
-                className="w-full mb-4 p-2 border border-gray-300 rounded"
-              />
-              <input
-                type="email"
-                name="from_email"
-                placeholder="Email Address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="w-full mb-4 p-2 border border-gray-300 rounded"
-              />
-              <div className="flex mb-4">
-                <select
-                  name="country_code"
-                  value={countryCode}
-                  onChange={(e) => setCountryCode(e.target.value)}
-                  className="w-1/3 mb-0 p-2 border border-gray-300 rounded mr-2"
-                >
-                  {countries.map((country) => (
-                    <option key={country.code} value={country.code}>
-                      {country.name} ({country.code})
-                    </option>
-                  ))}
-                </select>
-                <input
-                  type="tel"
-                  name="user_phone"
-                  placeholder="Phone Number"
-                  value={phoneNumber}
-                  onChange={(e) => setPhoneNumber(e.target.value)}
-                  required
-                  className="w-2/3 mb-0 p-2 border border-gray-300 rounded"
-                />
-              </div>
-              {error && <p className="text-red-500">{error}</p>}
-              <input
-                type="text"
-                name="subject"
-                placeholder="Your Subject"
-                className="w-full mb-4 p-2 border border-gray-300 rounded"
-              />
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                rows="5"
-                required
-                className="w-full mb-4 p-2 border border-gray-300 rounded"
-              ></textarea>
-              <motion.button
-                type="submit"
-                className="w-full bg-blue-600 text-white py-2 px-4 rounded-full hover:bg-blue-700 transition duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Submit
-              </motion.button>
-              {status && <p className="mt-4 text-green-600">{status}</p>}
-            </form>
+            <form
+            className="bg-white rounded-lg shadow-md p-6"
+            method="post"
+            action="https://form.digitalsochmedia.com/thanku.php"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "15px",
+            }}
+          >
+             <h2 className="text-3xl font-bold text-blue-600 mb-4 text-center">Please fill the form below and we'll get in touch with you.</h2> {/* Centered heading */}
+            <input
+              type="text"
+              name="name"
+              className="form-control"
+              placeholder="Enter Your Name"
+              style={{
+                padding: "10px",
+                borderRadius: "8px",
+                border: "1px solid #ddd",
+                fontSize: "1rem",
+              }}
+            />
+            <input
+              type="text"
+              className="form-control"
+              name="mobile"
+              pattern="[0-9]{10}"
+              autoComplete="off"
+              maxLength="10"
+              // onKeyPress={isNumber}
+              placeholder="Enter Mobile Number"
+              style={{
+                padding: "10px",
+                borderRadius: "8px",
+                border: "1px solid #ddd",
+                fontSize: "1rem",
+              }}
+            />
+            <input
+              type="text"
+              className="form-control"
+              name="msg"
+              placeholder="Enter Your Message"
+              style={{
+                padding: "10px",
+                borderRadius: "8px",
+                border: "1px solid #ddd",
+                fontSize: "1rem",
+              }}
+            />
+            <input
+              type="hidden"
+              name="clientMailID"
+              value="zealcarcare@gmail.com"
+            />
+            <input
+              name="website"
+              type="hidden"
+              value="takeoff-aviation.in/thanku.html"
+            />
+            <input name="loginID" type="hidden" value="1583" />
+            <input name="orderID" type="hidden" value="1742" />
+            <button
+              type="submit"
+              className="btn btn-block"
+              onClick={handleButtonClick}
+              style={{
+                backgroundColor: "#ec6c11",
+                color: "#fff",
+                padding: "12px",
+                fontSize: "1rem",
+                border: "none",
+                borderRadius: "8px",
+                cursor: "pointer",
+                textAlign: "center",
+              }}
+            >
+              <span className="fa fa-paper-plane"></span> Submit
+            </button>
+          </form>
           </motion.div>
         </div>
       </div>
+      <a href="tel:+7291014269" class="float" target="_blank">
+      <img src={`${process.env.PUBLIC_URL}/images/whats_app.png`} />
+      </a>
+
+  {/* Thank You Modal */}
+  {ThankYou && (
+        <div
+          id="myModal"
+          className="modal fade onload_modal"
+          role="dialog"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
+            zIndex: 1050,
+          }}
+        >
+          <div
+            style={{
+              backgroundColor: "white",
+              padding: "30px",
+              borderRadius: "10px",
+              textAlign: "center",
+              maxWidth: "400px",
+            }}
+          >
+            <h1 className="text-2xl font-bold text-blue-600">Thank You!</h1>
+            <p className="text-gray-600">We will get back to you shortly.</p>
+            <button
+              onClick={() => setThankModalOpen(false)}
+              className="mt-4 bg-blue-600 text-white py-2 px-4 rounded-full"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </section>
+
+    
   );
 };
 
 export default Contact;
+
+
+
+// <form ref={form} onSubmit={sendEmail} className="bg-white rounded-lg shadow-md p-6">
+// <h2 className="text-3xl font-bold text-blue-600 mb-4 text-center">Please fill the form below and we'll get in touch with you.</h2> {/* Centered heading */}
+//   <input
+//     type="text"
+//     name="from_name"
+//     placeholder="Your Name"
+//     required
+//     className="w-full mb-4 p-2 border border-gray-300 rounded"
+//   />
+//   <input
+//     type="email"
+//     name="from_email"
+//     placeholder="Email Address"
+//     value={email}
+//     onChange={(e) => setEmail(e.target.value)}
+//     required
+//     className="w-full mb-4 p-2 border border-gray-300 rounded"
+//   />
+//   <div className="flex mb-4">
+//     <select
+//       name="country_code"
+//       value={countryCode}
+//       onChange={(e) => setCountryCode(e.target.value)}
+//       className="w-1/3 mb-0 p-2 border border-gray-300 rounded mr-2"
+//     >
+//       {countries.map((country) => (
+//         <option key={country.code} value={country.code}>
+//           {country.name} ({country.code})
+//         </option>
+//       ))}
+//     </select>
+//     <input
+//       type="tel"
+//       name="user_phone"
+//       placeholder="Phone Number"
+//       value={phoneNumber}
+//       onChange={(e) => setPhoneNumber(e.target.value)}
+//       required
+//       className="w-2/3 mb-0 p-2 border border-gray-300 rounded"
+//     />
+//   </div>
+//   {error && <p className="text-red-500">{error}</p>}
+//   <input
+//     type="text"
+//     name="subject"
+//     placeholder="Your Subject"
+//     className="w-full mb-4 p-2 border border-gray-300 rounded"
+//   />
+//   <textarea
+//     name="message"
+//     placeholder="Your Message"
+//     rows="5"
+//     required
+//     className="w-full mb-4 p-2 border border-gray-300 rounded"
+//   ></textarea>
+//   <motion.button
+//     type="submit"
+//     className="w-full bg-blue-600 text-white py-2 px-4 rounded-full hover:bg-blue-700 transition duration-300"
+//     whileHover={{ scale: 1.05 }}
+//     whileTap={{ scale: 0.95 }}
+//   >
+//     Submit
+//   </motion.button>
+//   {status && <p className="mt-4 text-green-600">{status}</p>}
+// </form>

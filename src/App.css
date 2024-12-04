@@ -52,14 +52,14 @@ nav {
 
 .modal-content {
     background-color: #DBEAFE;
-    padding: 20px;
+    /* padding: 20px; */
     border-radius: 8px;
     text-align: center;
-    width: 90%;
-    max-width: 600px;
+    width: 100%;
+    max-width: 100%;
     animation: slideIn 0.5s ease-in-out;
-    margin: 10px;
-    @apply lg:p-10;
+    /* margin: 10px; */
+    /* @apply lg:p-10; */
 }
 
 /* Slide-in animation for modal */
@@ -191,3 +191,26 @@ nav {
 .faculty-card .image-overlay span {
     @apply text-white text-lg font-semibold;
 }
+
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    z-index: 1000;
+    transition: transform 0.3s;
+  }
+  
+  .float:hover {
+    transform: scale(1.1);
+  }
+
