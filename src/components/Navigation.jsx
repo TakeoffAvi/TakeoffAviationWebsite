@@ -11,6 +11,7 @@ const Navigation = ({ onCoursesClick }) => {
   };
 
   return (
+    // Digital Soch Commit
     <nav className="bg-white py-4 shadow-md">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <motion.div
